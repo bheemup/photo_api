@@ -14,7 +14,6 @@ app.use(express.json())
 
 require("./DB/conn")
 app.get('/',async(req,res)=>{
-    // res.send("hii this is router home page ")
     const data = await image.find()
     return res.send({data:data})
     
